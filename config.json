@@ -1,0 +1,52 @@
+{
+    "decryption_keys": ["testkey", "secret", "password"],
+    "ciphers": ["aes-256-cbc", "aes-128-cbc", "des3"],
+    "encryption_signatures": ["-----BEGIN PGP MESSAGE-----", "Encrypted with AES-256"],
+    "known_checksums": {},
+    "entropy_threshold": 7.0,
+    "max_xxd_output": 1000,
+    "enable_file_extraction": true,
+    "enable_executable_check": true,
+    "enable_checksum_verification": true,
+    "enable_binwalk": true,
+    "enable_yara": true,
+    "yara_rules_dir": "yara_rules",
+    "max_file_size_analyze": 52428800,
+    "report_suspicious_strings": true,
+    "suspicious_string_patterns": [
+        "eval(.*)",
+        "base64_decode(.*)",
+        "shell_exec(.*)",
+        "system(.*)",
+        "passthru(.*)",
+        "exec(.*)",
+        "phpinfo()"
+    ],
+    "known_file_extensions": [
+        ".exe",
+        ".dll",
+        ".so",
+        ".py",
+        ".sh",
+        ".txt",
+        ".pdf",
+        ".doc",
+        ".docx",
+        ".xls",
+        ".xlsx"
+    ],
+    "enable_signature_validation": true,
+    "trusted_signatures": {
+        "exe": [],
+        "dll": []
+    ],
+    "attempt_readonly_handling": true,
+    "delete_failed_decryption": true,
+    "enable_heuristic_analysis": true,
+    "suspicious_file_names": [
+        ".*\\.tmp$",
+        ".*\\.swp$"
+    ],
+    "report_file_metadata": true,
+    "max_string_length": 200
+}
